@@ -1,0 +1,5 @@
+org\longbiu\meeting\controller\DepartmentController.class
+org\longbiu\meeting\mapper\DepartmentMapper.class
+org\longbiu\meeting\controller\HelloController.class
+org\longbiu\meeting\model\Department.class
+org\longbiu\meeting\service\DepartmentService.class
