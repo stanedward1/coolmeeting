@@ -4,6 +4,7 @@ org\longbiu\meeting\mapper\EmployeeMapper.class
 org\longbiu\meeting\service\DepartmentService.class
 org\longbiu\meeting\controller\LoginController.class
 org\longbiu\meeting\controller\DepartmentController.class
+org\longbiu\meeting\controller\NotificationsController.class
 org\longbiu\meeting\mapper\DepartmentMapper.class
 org\longbiu\meeting\service\EmployeeService.class
 org\longbiu\meeting\model\Department.class
