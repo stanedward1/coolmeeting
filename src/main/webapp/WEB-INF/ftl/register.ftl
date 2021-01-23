@@ -40,7 +40,8 @@
                             <tr>
                                 <td>确认密码：</td>
                                 <td>
-                                    <input type="password" id="confirm" maxlength="20"/>
+                                    <input type="password" id="confirm" maxlength="20" onchange="check()"/>
+                                    <div style="color: #ff2a34" id="confirminfo"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -57,10 +58,14 @@
                             </tr>
 							<td>所在部门：</td>
                                 <td>
-                                    <select name="deptid">    
-                                     	<option value="1">技术部</option>
-                                     	<option value="2">财务部</option>
-										<option value="3">人事部</option>
+                                    <select name="deptid">
+
+                                        <#if deps??>
+                                        <#list deps as dep>
+                                            <option value="${dep.departmentid}">${dep.departmentname}</option>
+                                        </#list>
+                                        </#if>
+
                                      </select>
                                 </td>
                             </tr>
@@ -80,5 +85,17 @@
             更多问题，欢迎联系<a href="mailto:webmaster@eeg.com">管理员</a>
             <img src="images/footer.png" alt="CoolMeeting"/>
         </div>
+    <script>
+        function check(){
+            var password = document.getElementById('password');
+            var confirm = document.getElementById('confirm');
+            var confirminfo = document.getElementById('confirminfo');
+            if(password.value!= confirm.value){
+                confirminfo.innerHTML = '两次输入密码不一致';
+            }else{
+                confirminfo.innerHTML = '两次输入密码一致';
+            }
+        }
+    </script>
     </body>
 </html>

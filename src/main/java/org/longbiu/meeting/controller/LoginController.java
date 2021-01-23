@@ -1,6 +1,8 @@
 package org.longbiu.meeting.controller;
 
+import org.longbiu.meeting.model.Department;
 import org.longbiu.meeting.model.Employee;
+import org.longbiu.meeting.service.DepartmentService;
 import org.longbiu.meeting.service.EmployeeService;
 import org.longbiu.meeting.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * @Classname LoginController
@@ -22,6 +25,10 @@ public class LoginController {
 
     @Autowired
     EmployeeService employeeService;
+
+    @Autowired
+    DepartmentService departmentService;
+
     @RequestMapping("/")
     public String login(){
         return "login";
@@ -45,5 +52,12 @@ public class LoginController {
                 return "redirect:/notifications";
             }
         }
+    }
+
+    @RequestMapping("/register")
+    public String register(Model model){
+        List<Department> deps =  departmentService.getAllDeps();
+        model.addAttribute("deps",deps);
+        return "register";
     }
 }

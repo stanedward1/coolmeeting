@@ -5,4 +5,8 @@
     <select id="getDepById" resultType="org.longbiu.meeting.model.Department">
         select * from department where departmentid=#{id};
     </select>
+    
+    <select id="getAllDeps" resultType="org.longbiu.meeting.model.Department">
+        select * from department;
+    </select>
 </mapper>

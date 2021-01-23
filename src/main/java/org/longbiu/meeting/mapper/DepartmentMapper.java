@@ -2,6 +2,8 @@ package org.longbiu.meeting.mapper;
 
 import org.longbiu.meeting.model.Department;
 
+import java.util.List;
+
 /**
  * @Classname DepartmentMapper
  * @Description TODO
@@ -10,4 +12,6 @@ import org.longbiu.meeting.model.Department;
  */
 public interface DepartmentMapper {
     Department getDepById(Integer id);
+
+    List<Department> getAllDeps();
 }
