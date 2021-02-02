@@ -7,4 +7,7 @@
         select * from employee where username=#{username};
     </select>
 
+    <insert id="doReg" parameterType="org.longbiu.meeting.model.Employee">
+        insert into employee (employeename, username, phone, email, status, departmentid, password, role) VALUES (#{employeename},#{username},#{phone},#{email},#{status},#{departmentid},#{password},#{role});
+    </insert>
 </mapper>

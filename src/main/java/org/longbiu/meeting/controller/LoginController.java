@@ -60,4 +60,16 @@ public class LoginController {
         model.addAttribute("deps",deps);
         return "register";
     }
+
+    @RequestMapping("/doReg")
+    public String doReg(Employee employee,Model model){
+        Integer result = employeeService.doReg(employee);
+        if (result == 1) {
+            return "redirect:/";
+        }else{
+            model.addAttribute("error","注册失败");
+            model.addAttribute("employee",employee);
+            return "forward:/register";
+        }
+    }
 }

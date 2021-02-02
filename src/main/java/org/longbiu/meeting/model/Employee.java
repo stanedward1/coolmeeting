@@ -13,7 +13,7 @@ public class Employee {
     private String phone;
     private String email;
     private Integer status;
-    private Integer department;
+    private Integer departmentid;
     private String password;
     private Integer role;
 
@@ -65,12 +65,12 @@ public class Employee {
         this.status = status;
     }
 
-    public Integer getDepartment() {
-        return department;
+    public Integer getDepartmentid() {
+        return departmentid;
     }
 
-    public void setDepartment(Integer department) {
-        this.department = department;
+    public void setDepartmentid(Integer departmentid) {
+        this.departmentid = departmentid;
     }
 
     public String getPassword() {

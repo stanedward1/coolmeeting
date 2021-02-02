@@ -22,4 +22,14 @@ public class EmployeeService {
         }
         return employee;
     }
+
+    public Integer doReg(Employee employee) {
+        Employee emp = employeeMapper.loadEmByUsername(employee.getUsername());
+        if(emp!=null){
+            return -1;
+        }
+        employee.setRole(1);
+        employee.setStatus(0);
+        return employeeMapper.doReg(employee);
+    }
 }

@@ -10,4 +10,6 @@ import org.longbiu.meeting.model.Employee;
  */
 public interface EmployeeMapper {
     Employee loadEmByUsername(String username);
+
+    Integer doReg(Employee employee);
 }
