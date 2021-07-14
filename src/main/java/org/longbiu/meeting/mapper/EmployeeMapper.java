@@ -2,6 +2,8 @@ package org.longbiu.meeting.mapper;
 
 import org.longbiu.meeting.model.Employee;
 
+import java.util.List;
+
 /**
  * @Classname EmployeeMapper
  * @Description TODO
@@ -12,4 +14,6 @@ public interface EmployeeMapper {
     Employee loadEmByUsername(String username);
 
     Integer doReg(Employee employee);
+
+    List<Employee> getAllEmpsByStatus(Integer status);
 }

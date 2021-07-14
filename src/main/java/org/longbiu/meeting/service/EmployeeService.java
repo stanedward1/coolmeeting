@@ -5,6 +5,8 @@ import org.longbiu.meeting.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @Classname EmployeeService
  * @Description TODO
@@ -31,5 +33,9 @@ public class EmployeeService {
         employee.setRole(1);
         employee.setStatus(0);
         return employeeMapper.doReg(employee);
+    }
+
+    public List<Employee> getAllEmpsByStatus(Integer status) {
+        return employeeMapper.getAllEmpsByStatus(status);
     }
 }
