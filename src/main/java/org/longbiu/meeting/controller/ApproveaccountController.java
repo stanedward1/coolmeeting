@@ -25,6 +25,12 @@ public class ApproveaccountController {
         model.addAttribute("emps",employeeService.getAllEmpsByStatus(PENDING_APPROVEA));
         return "approveaccount";
     }
+
+    @RequestMapping("/updatestatus")
+    public String updatestatus(Integer employeeid, Integer status) {
+        Integer result = employeeService.updatestatus(employeeid, status);
+        return "redirect:/admin/approveaccount";
+    }
 }
 
     

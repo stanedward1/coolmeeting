@@ -32,9 +32,9 @@
                                 <td>${emp.phone}</td>
                                 <td>${emp.email}</td>
                                 <td>
-                                    <input type="button" class="clickbutton" value="通过"/>
-                                    <input type="button" class="clickbutton" value="删除"/>
-                                </td>
+                                    <a type="button" class="clickbutton" href="/admin/updatestatus?employeeid=${emp.employeeid}&status=1">通过</a>
+                                    <a type="button" class="clickbutton" href="/admin/updatestatus?employeeid=${emp.employeeid}&status=2">删除</a>
+                                </td2
                             </tr>
                         </#list>
                     </#if>

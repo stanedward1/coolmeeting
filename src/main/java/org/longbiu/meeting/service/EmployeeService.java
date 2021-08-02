@@ -38,4 +38,8 @@ public class EmployeeService {
     public List<Employee> getAllEmpsByStatus(Integer status) {
         return employeeMapper.getAllEmpsByStatus(status);
     }
+
+    public Integer updatestatus(Integer employeeid, Integer status) {
+        return employeeMapper.approveaccount(employeeid,status);
+    }
 }

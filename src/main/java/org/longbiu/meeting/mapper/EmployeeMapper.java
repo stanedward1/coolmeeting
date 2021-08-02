@@ -1,5 +1,6 @@
 package org.longbiu.meeting.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import org.longbiu.meeting.model.Employee;
 
 import java.util.List;
@@ -16,4 +17,6 @@ public interface EmployeeMapper {
     Integer doReg(Employee employee);
 
     List<Employee> getAllEmpsByStatus(Integer status);
+
+    Integer approveaccount(@Param("employeeid") Integer employeeid, @Param("status") Integer status);
 }
