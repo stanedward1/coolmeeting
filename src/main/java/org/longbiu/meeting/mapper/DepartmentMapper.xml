@@ -9,4 +9,16 @@
     <select id="getAllDeps" resultType="org.longbiu.meeting.model.Department">
         select * from department;
     </select>
+
+    <insert id="adddepartment" parameterType="java.lang.String">
+        insert into department (departmentname) values (#{departmentname});
+    </insert>
+
+    <select id="getDepByName" resultType="org.longbiu.meeting.model.Department">
+        select * from department where departmentname=#{departmentname};
+    </select>
+
+    <delete id="deletedep">
+        delete from department where departmentid=#{departmentid};
+    </delete>
 </mapper>
