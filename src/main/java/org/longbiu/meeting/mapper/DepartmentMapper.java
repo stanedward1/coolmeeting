@@ -1,5 +1,6 @@
 package org.longbiu.meeting.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import org.longbiu.meeting.model.Department;
 
 import java.util.List;
@@ -20,4 +21,6 @@ public interface DepartmentMapper {
     Department getDepByName(String departmentname);
 
     Integer deletedep(Integer departmentid);
+
+    Integer updatedep(@Param("id") Integer id, @Param("name") String name);
 }
