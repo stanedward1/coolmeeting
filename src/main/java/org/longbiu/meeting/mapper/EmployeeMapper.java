@@ -19,4 +19,8 @@ public interface EmployeeMapper {
     List<Employee> getAllEmpsByStatus(Integer status);
 
     Integer approveaccount(@Param("employeeid") Integer employeeid, @Param("status") Integer status);
+
+    List<Employee> getAllEmps(@Param("emp") Employee employee, @Param("page") Integer page, @Param("pagesize") Integer pageSize);
+
+    Long getTotal(Employee employee);
 }

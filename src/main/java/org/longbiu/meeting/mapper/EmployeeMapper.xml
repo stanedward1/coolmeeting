@@ -4,18 +4,48 @@
 <mapper namespace="org.longbiu.meeting.mapper.EmployeeMapper">
 
     <select id="loadEmByUsername" resultType="org.longbiu.meeting.model.Employee">
-        select * from employee where username=#{username};
+        select *
+        from employee
+        where username = #{username};
     </select>
-    
+
     <select id="getAllEmpsByStatus" resultType="org.longbiu.meeting.model.Employee">
-        select * from employee where status=#{status};
+        select *
+        from employee
+        where status = #{status};
     </select>
 
     <insert id="doReg" parameterType="org.longbiu.meeting.model.Employee">
-        insert into employee (employeename, username, phone, email, status, departmentid, password, role) VALUES (#{employeename},#{username},#{phone},#{email},#{status},#{departmentid},#{password},#{role});
+        insert into employee (employeename, username, phone, email, status, departmentid, password, role)
+        VALUES (#{employeename}, #{username}, #{phone}, #{email}, #{status}, #{departmentid}, #{password}, #{role});
     </insert>
 
     <update id="approveaccount">
-        update employee set status = #{status} where employeeid=#{employeeid};
+        update employee
+        set status = #{status}
+        where employeeid = #{employeeid};
     </update>
+
+    <select id="getAllEmps" resultType="employee">
+        select *
+        from employee where status = #{emp.status}
+        <if test="emp.employeename!=null">
+            and employeename like concat('%',#{emp.employeename},'%')
+        </if>
+        <if test="emp.username!=null">
+            and username like concat('%', #{emp.username},'%')
+        </if>
+        limit #{page},#{pagesize}
+    </select>
+
+    <select id="getTotal" resultType="long">
+        select count(*)
+        from employee where status = #{status}
+        <if test="employeename!=null">
+            and employeename like concat('%', #{employeename},'%')
+        </if>
+        <if test="username!=null">
+            and username like concat('%', #{username},'%')
+        </if>
+    </select>
 </mapper>

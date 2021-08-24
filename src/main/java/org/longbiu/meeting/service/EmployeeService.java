@@ -17,9 +17,10 @@ import java.util.List;
 public class EmployeeService {
     @Autowired
     EmployeeMapper employeeMapper;
-    public Employee doLogin(String username,String password){
+
+    public Employee doLogin(String username, String password) {
         Employee employee = employeeMapper.loadEmByUsername(username);
-        if(employee == null||!employee.getPassword().equals(password)){
+        if (employee == null || !employee.getPassword().equals(password)) {
             return null;
         }
         return employee;
@@ -27,7 +28,7 @@ public class EmployeeService {
 
     public Integer doReg(Employee employee) {
         Employee emp = employeeMapper.loadEmByUsername(employee.getUsername());
-        if(emp!=null){
+        if (emp != null) {
             return -1;
         }
         employee.setRole(1);
@@ -40,6 +41,15 @@ public class EmployeeService {
     }
 
     public Integer updatestatus(Integer employeeid, Integer status) {
-        return employeeMapper.approveaccount(employeeid,status);
+        return employeeMapper.approveaccount(employeeid, status);
+    }
+
+    public List<Employee> getAllEmps(Employee employee, Integer page, Integer pageSize) {
+        page = (page - 1) * pageSize;
+        return employeeMapper.getAllEmps(employee, page, pageSize);
+    }
+
+    public Long getTotal(Employee employee) {
+        return employeeMapper.getTotal(employee);
     }
 }
