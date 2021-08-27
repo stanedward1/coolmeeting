@@ -29,7 +29,7 @@
                         <td>${mr.capacity}</td>
                         <td>${(mr.status==0)?string('启用','已占用')}</td>
                         <td>
-                            <a class="clickbutton" href="roomdetails.ftl">查看详情</a>
+                            <a class="clickbutton" href="/roomdetails?roomid=${mr.roomid}">查看详情</a>
                         </td>
                     </tr>
                 </#list>

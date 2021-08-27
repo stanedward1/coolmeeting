@@ -18,7 +18,7 @@ import java.util.List;
  * @Classname LoginController
  * @Description TODO
  * @Date 2021/1/23 13:51
- * @Author LongBiu
+ * @Author longbiu
  */
 @Controller
 public class LoginController {

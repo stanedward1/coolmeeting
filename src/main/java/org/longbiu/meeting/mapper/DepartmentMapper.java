@@ -9,7 +9,7 @@ import java.util.List;
  * @Classname DepartmentMapper
  * @Description TODO
  * @Date 2021/1/22 13:47
- * @Author LongBiu
+ * @Author longbiu
  */
 public interface DepartmentMapper {
     Department getDepById(Integer id);

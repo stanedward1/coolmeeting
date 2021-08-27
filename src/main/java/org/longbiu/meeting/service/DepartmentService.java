@@ -11,7 +11,7 @@ import java.util.List;
  * @Classname DepartmentService
  * @Description TODO
  * @Date 2021/1/22 13:47
- * @Author LongBiu
+ * @Author longbiu
  */
 @Service
 public class DepartmentService {

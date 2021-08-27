@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Classname NotificationsController
  * @Description TODO
  * @Date 2021/1/23 16:20
- * @Author LongBiu
+ * @Author longbiu
  */
 @Controller
 public class NotificationsController {

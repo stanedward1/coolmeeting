@@ -9,7 +9,7 @@ import java.util.List;
  * @Classname EmployeeMapper
  * @Description TODO
  * @Date 2021/1/23 14:08
- * @Author LongBiu
+ * @Author longbiu
  */
 public interface EmployeeMapper {
     Employee loadEmByUsername(String username);

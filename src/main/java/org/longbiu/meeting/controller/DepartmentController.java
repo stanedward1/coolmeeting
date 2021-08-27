@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Classname DepartmentController
  * @Description TODO
  * @Date 2021/1/22 13:49
- * @Author Longbiu
+ * @Author longbiu
  */
 @Controller
 @RequestMapping("/admin")

@@ -4,7 +4,7 @@ package org.longbiu.meeting.model;
  * @Classname MeetingRoom
  * @Description 会议室的实体类
  * @Date 2021/8/26 0:35
- * @Author Longbiu
+ * @Author longbiu
  */
 public class MeetingRoom {
     private Integer roomid;

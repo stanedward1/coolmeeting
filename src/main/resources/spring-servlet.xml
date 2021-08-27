@@ -45,6 +45,7 @@
                 <prop key="date_format">yyyy-MM-dd</prop>
                 <prop key="time_format">HH:mm:ss</prop>
                 <prop key="number_format">#.####</prop>
+                <prop key="classic_compatible">true</prop>
             </props>
         </property>
     </bean>

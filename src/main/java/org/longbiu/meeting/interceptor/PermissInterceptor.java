@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
  * @Classname PermissInterceptor
  * @Description TODO
  * @Date 2021/2/14 0:38
- * @Author Longbiu
+ * @Author longbiu
  */
 public class PermissInterceptor implements HandlerInterceptor {
     AntPathMatcher pathMatcher = new AntPathMatcher();

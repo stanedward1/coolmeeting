@@ -8,8 +8,12 @@ import java.util.List;
  * @Classname MeetingRoomMapper.xml
  * @Description MeetingRoom的dao层/mapper层
  * @Date 2021/8/26 0:37
- * @Author Longbiu
+ * @Author longbiu
  */
 public interface MeetingRoomMapper {
     List<MeetingRoom> getAllMr();
+
+    MeetingRoom getMrById(Integer roomid);
+
+    Integer updateRoom(MeetingRoom meetingRoom);
 }

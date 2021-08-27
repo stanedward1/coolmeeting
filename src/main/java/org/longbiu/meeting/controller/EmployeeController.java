@@ -14,7 +14,7 @@ import java.util.List;
  * @Classname DepartmentController
  * @Description TODO
  * @Date 2021/8/22 13:49
- * @Author Longbiu
+ * @Author longbiu
  */
 @Controller
 @RequestMapping("/admin")

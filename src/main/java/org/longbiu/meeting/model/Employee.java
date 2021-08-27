@@ -4,7 +4,7 @@ package org.longbiu.meeting.model;
  * @Classname Employee
  * @Description TODO
  * @Date 2021/1/23 14:00
- * @Author LongBiu
+ * @Author longbiu
  */
 public class Employee {
     private Integer employeeid;

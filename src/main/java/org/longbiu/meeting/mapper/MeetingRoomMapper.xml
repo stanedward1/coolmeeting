@@ -3,6 +3,23 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.longbiu.meeting.mapper.MeetingRoomMapper">
     <select id="getAllMr" resultType="org.longbiu.meeting.model.MeetingRoom">
-        select * from meetingroom;
+        select *
+        from meetingroom;
     </select>
+
+    <select id="getMrById" resultType="org.longbiu.meeting.model.MeetingRoom">
+        select *
+        from meetingroom
+        where roomid = #{roomid};
+    </select>
+
+    <update id="updateRoom" parameterType="org.longbiu.meeting.model.MeetingRoom">
+        update meetingroom
+        set roomnum    = #{roomnum},
+            roomname=#{roomname},
+            capacity=#{capacity},
+            status=#{status},
+            description=#{description}
+        where roomid = #{roomid}
+    </update>
 </mapper>

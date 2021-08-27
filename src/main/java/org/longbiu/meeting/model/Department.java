@@ -4,7 +4,7 @@ package org.longbiu.meeting.model;
  * @Classname Department
  * @Description TODO
  * @Date 2021/1/22 13:45
- * @Author LongBiu
+ * @Author longbiu
  */
 public class Department {
     private Integer departmentid;

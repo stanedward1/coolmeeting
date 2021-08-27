@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Classname ApproveaccountController
  * @Description TODO
  * @Date 2021/7/6 22:28
- * @Author Longbiu
+ * @Author longbiu
  */
 @Controller
 @RequestMapping("/admin")
