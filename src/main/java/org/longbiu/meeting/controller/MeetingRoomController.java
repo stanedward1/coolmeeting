@@ -39,4 +39,15 @@ public class MeetingRoomController {
             return "forward:/roomdetails";
         }
     }
+
+    @RequestMapping("/admin/addmeetingroom")
+    public String addmeetingroom() {
+        return "addmeetingroom";
+    }
+
+    @RequestMapping("/admin/doAddMr")
+    public String doAddMr(MeetingRoom meetingRoom) {
+        Integer result = meetingRoomService.addMr(meetingRoom);
+        return "redirect:/meetingrooms";
+    }
 }

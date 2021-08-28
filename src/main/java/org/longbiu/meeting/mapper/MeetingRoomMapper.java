@@ -16,4 +16,6 @@ public interface MeetingRoomMapper {
     MeetingRoom getMrById(Integer roomid);
 
     Integer updateRoom(MeetingRoom meetingRoom);
+
+    Integer addMr(MeetingRoom meetingRoom);
 }

@@ -22,4 +22,9 @@
             description=#{description}
         where roomid = #{roomid}
     </update>
+
+    <insert id="addMr" parameterType="org.longbiu.meeting.model.MeetingRoom">
+        insert into meetingroom (roomnum, roomname, capacity, status, description)
+        values (#{roomnum}, #{roomname}, #{capacity}, #{status}, #{description})
+    </insert>
 </mapper>

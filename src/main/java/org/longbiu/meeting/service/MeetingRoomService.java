@@ -30,4 +30,8 @@ public class MeetingRoomService {
     public Integer updateRoom(MeetingRoom meetingRoom) {
         return meetingRoomMapper.updateRoom(meetingRoom);
     }
+
+    public Integer addMr(MeetingRoom meetingRoom) {
+        return meetingRoomMapper.addMr(meetingRoom);
+    }
 }
