@@ -48,4 +48,10 @@
             and username like concat('%', #{username},'%')
         </if>
     </select>
+
+    <select id="getEmpsByDepId" resultType="org.longbiu.meeting.model.Employee">
+        select *
+        from employee
+        where departmentid = #{depId};
+    </select>
 </mapper>

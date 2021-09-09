@@ -23,4 +23,6 @@ public interface EmployeeMapper {
     List<Employee> getAllEmps(@Param("emp") Employee employee, @Param("page") Integer page, @Param("pagesize") Integer pageSize);
 
     Long getTotal(Employee employee);
+
+    List<Employee> getEmpsByDepId(Integer depId);
 }
