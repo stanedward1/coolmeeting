@@ -1,4 +1,4 @@
-## 一个基于SSM的会议室管理系统
+## SSM + Freemarker——会议室管理系统
 ## 涉及到的技术点：
 Spring
 
