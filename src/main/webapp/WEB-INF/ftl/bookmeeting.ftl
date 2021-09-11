@@ -4,6 +4,7 @@
     <title>CoolMeeting会议管理系统</title>
     <link rel="stylesheet" href="/styles/common.css"/>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="/My97DatePicker/WdatePicker.js"></script>
     <style type="text/css">
         #divfrom {
             float: left;
@@ -179,15 +180,13 @@
                     <tr>
                         <td>预计开始时间：</td>
                         <td>
-                            <input type="date" id="startdate"/>
-                            <input type="time" id="starttime"/>
+                            <input type="text" class="Wdate" id="starttime" onclick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:MM:ss'})"/>
                         </td>
                     </tr>
                     <tr>
                         <td>预计结束时间：</td>
                         <td>
-                            <input type="date" id="enddate"/>
-                            <input type="time" id="endtime"/>
+                            <input type="text" class="Wdate" id="endtime" onclick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:MM:ss'})"/>
                         </td>
                     </tr>
                     <tr>
