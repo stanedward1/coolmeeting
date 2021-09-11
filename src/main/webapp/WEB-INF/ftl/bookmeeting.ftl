@@ -88,7 +88,6 @@
         function fillEmployees() {
             clearList(selEmployees);
             var departmentid = selDepartments.options[selDepartments.selectedIndex].value;
-            var employees;
             $.get("getempbydepid?depId="+departmentid, function (data) {
                 for (i = 0; i < data.length; i++) {
                     var emp = document.createElement("option");
@@ -143,6 +142,7 @@
             var opt = document.createElement("option");
             opt.value = optEmployee.value;
             opt.text = optEmployee.text;
+            opt.selected = true;
 
             if (insertIndex == -1) {
                 selSelectedEmployees.appendChild(opt);
