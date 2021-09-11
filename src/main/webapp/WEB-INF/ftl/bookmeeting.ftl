@@ -89,7 +89,7 @@
         function fillEmployees() {
             clearList(selEmployees);
             var departmentid = selDepartments.options[selDepartments.selectedIndex].value;
-            $.get("getempbydepid?depId="+departmentid, function (data) {
+            $.get("getempbydepid?depId=" + departmentid, function (data) {
                 for (i = 0; i < data.length; i++) {
                     var emp = document.createElement("option");
                     emp.value = data[i].employeeid;
@@ -161,32 +161,34 @@
         <div class="content-nav">
             会议预定 > 预定会议
         </div>
-        <form>
+        <form action="/doAddMeeting" method="post">
             <fieldset>
                 <legend>会议信息</legend>
                 <table class="formtable">
                     <tr>
                         <td>会议名称：</td>
                         <td>
-                            <input type="text" id="meetingname" maxlength="20"/>
+                            <input name="meetingname" type="text" id="meetingname" maxlength="20"/>
                         </td>
                     </tr>
                     <tr>
                         <td>预计参加人数：</td>
                         <td>
-                            <input type="text" id="numofattendents"/>
+                            <input name="numberofparticipants" type="text" id="numofattendents"/>
                         </td>
                     </tr>
                     <tr>
                         <td>预计开始时间：</td>
                         <td>
-                            <input type="text" class="Wdate" id="starttime" onclick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:MM:ss'})"/>
+                            <input type="text" class="Wdate" id="starttime" name="starttime"
+                                   onclick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss'})">
                         </td>
                     </tr>
                     <tr>
                         <td>预计结束时间：</td>
                         <td>
-                            <input type="text" class="Wdate" id="endtime" onclick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:MM:ss'})"/>
+                            <input type="text" class="Wdate" id="endtime" name="endtime"
+                                   onclick="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss'})">
                         </td>
                     </tr>
                     <tr>
@@ -202,7 +204,7 @@
                     <tr>
                         <td>会议说明：</td>
                         <td>
-                            <textarea id="description" rows="5"></textarea>
+                            <textarea name="description" id="description" rows="5"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -219,7 +221,7 @@
                                 <input type="button" class="clickbutton" value="&lt;" onclick="deSelectEmployees()"/>
                             </div>
                             <div id="divto">
-                                <select id="selSelectedEmployees" multiple="true">
+                                <select name="mps" id="selSelectedEmployees" multiple="true">
                                 </select>
                             </div>
                         </td>
@@ -237,7 +239,7 @@
 </div>
 <div class="page-footer">
     <hr/>
-    更多问题，欢迎联系<a href="mailto:webmaster@eeg.com">管理员</a>
+    更多问题，欢迎联系<a href="mailto:longbiu@foxmail.com">管理员</a>
     <img src="/images/footer.png" alt="CoolMeeting"/>
 </div>
 </body>

@@ -8,6 +8,14 @@
     <context:component-scan base-package="org.longbiu.meeting" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
+    <bean class="org.springframework.format.support.FormattingConversionServiceFactoryBean" id="conversionService">
+        <property name="converters">
+            <set>
+                <ref bean="dateConverter"/>
+            </set>
+        </property>
+    </bean>
+    <bean class="org.longbiu.meeting.converter.DateConverter" id="dateConverter"/>
     <mvc:annotation-driven/>
 
     <mvc:resources mapping="/**" location="/"/>
