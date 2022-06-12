@@ -27,3 +27,6 @@ MySQL
 然后运行即可
 
 # License
+[Apache License 2.0](LICENSE)
+
+Copyright (c) 2019-2022 stanedward1
